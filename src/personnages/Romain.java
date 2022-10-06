@@ -35,8 +35,8 @@ public class Romain {
 		assert t-force > 0;
 	}
 	
-	private void donner(Equipement equipement) {
-		equipements[nbEquipement] = equipement;
+	private void donner(Equipement equipement,int position) {
+		equipements[position] = equipement;
 		nbEquipement ++;
 		System.out.println("Le soldat " + nom + " s'equipe d'un " + equipement + " .");
 	}
@@ -44,18 +44,19 @@ public class Romain {
 	public void sEquiper(Equipement equipement) {
 		switch (nbEquipement) {
 		case 2 :
-			System.out.println("Le soldat " + nom + " est déjà bien protégé !");
+			System.out.println("Le soldat " + nom + " est deja bien proteege !");
 			break;
 		case 1 :
-			if (equipements[0] == equipement) {
-				System.out.println("Le soldat " + nom + " possède déjà un " + equipement + " .");
+			if ((equipements[0] == equipement) || (equipements[1] == equipement)) {
+				System.out.println("Le soldat " + nom + " possede deja un " + equipement + " .");
 			}
 			else {
-				donner(equipement);
+				if (equipements[0] == null) donner(equipement,0);
+				else donner(equipement,1);
 			}
 			break;
 		case 0 :
-			donner(equipement);
+			donner(equipement,0);
 			break;
 		}
 	}
