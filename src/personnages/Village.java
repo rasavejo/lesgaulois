@@ -36,7 +36,7 @@ public class Village {
 	}
 	
 	public static void main(String[] args) {
-		Village village = new Village("Village des Irréductibles",30);
+		Village village = new Village("Village des Irreductibles",30);
 		// Gaulois gaulois = village.trouverHabitant(30);
 		// Erreur car on dépasse du tableau
 		Chef abra = new Chef("Abraracourcix",6,1,village);
