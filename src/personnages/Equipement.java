@@ -7,6 +7,7 @@ public enum Equipement {CASQUE("casque"),BOUCLIER("bouclier");
 		this.nom = nom;
 	}
 	
+	@Override
 	public String toString() {
 		return(nom);
 	}
