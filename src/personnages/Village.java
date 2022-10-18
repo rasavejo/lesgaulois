@@ -19,13 +19,13 @@ public class Village {
 		return nom;
 	}
 	
-	public void ajouterVillageois(Gaulois g) {
-		villageois[nbVillageois] = g;
+	public void ajouterVillageois(Gaulois gaulois) {
+		villageois[nbVillageois] = gaulois;
 		nbVillageois ++;
 	}
 	
-	public Gaulois trouverHabitant(int n) {
-		return villageois[n];
+	public Gaulois trouverHabitant(int index) {
+		return villageois[index];
 	}
 	
 	public void afficherVillageois() {
